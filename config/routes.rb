@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :grades
   resources :courses
   root to: 'pages#home'
   devise_for :users
