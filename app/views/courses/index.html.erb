@@ -17,10 +17,10 @@
       <tr>
         <td><%= course.course_name %></td>
         <td><%= course.course_code %></td>
-        <td><%= link_to 'Show', course %></td>
+        <td><%= link_to 'Show',  course, class: 'btn btn-success btn btn-sm' %></td>
         <% if current_user && current_user.admin %>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_course_path(course), class: 'btn btn-success btn btn-sm' %></td>
+        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn btn-sm' %></td>
         <%end%>
       </tr>
     <% end %>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Course', new_course_path %>
+<%= link_to 'New Course', new_course_path, class: 'btn btn-success btn btn-sm' %>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Grades</h1>
+
+<table class=" table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Mark</th>
+      <th>Course</th>
+      <th>User</th>
+      <th>Action</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grades.each do |grade| %>
+      <tr>
+        <td><%= grade.mark %></td>
+        <td><%= grade.course_id %></td>
+        <td><%= grade.user_id %></td>
+        <td><%= link_to 'Show', grade ,class: 'btn btn-success btn btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_grade_path(grade), class: 'btn btn-success btn btn-sm' %></td>
+        <td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn btn-sm' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grade', new_grade_path, class: 'btn btn-success btn btn-sm' %>
