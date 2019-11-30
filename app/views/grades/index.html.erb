@@ -25,12 +25,14 @@
     <% end %>
     <td colspan="6">
     <% if current_user && current_user.admin == true %>
+    <b>
     <%= @user = current_user.last_name %>
     <%= @grad = Grade.all.sum(:mark)*100/600 %>%
     <% if @grad > 50 %>
     <u style="color: black">Pass
     <%else%>
     <u style="color: red">Fails</u>
+    </u>
     <%end%>
     </td>
 

@@ -36,23 +36,10 @@ Function List
 * user login function
 * login using Email and password
 * Logout function
-* cusomers create, display, edit and delete functions
-
-* login function
-* create and save event
-* User edit and delete information
-* Student edit and delete information
-* Student and user search
-* Student details
-* User details
-* User list
-* Student list
-* Action cencel
+* create and save user
+* Student search
 * User,student and marks update
 * User management
-* User registration
-* User accout managent
-* student registration
 * student account
 * course marks grading
 
@@ -83,13 +70,8 @@ System Instensity Diagram
 
 Gem Will be need
 =================
-
-* carrierwave
-* mini_magick
 * ransack
 * devise
-* Ajax
 * kaminali
-* rails admin
 * comment function
 
