@@ -53,7 +53,4 @@ class GradesController < ApplicationController
     def grade_params
       params.require(:grade).permit(:mark, :course_id, :user_id)
     end
-
-
-
 end
