@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_11_29_085900) do
   end
 
   create_table "grades", force: :cascade do |t|
-    t.string "mark"
+    t.integer "mark"
     t.bigint "course_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
