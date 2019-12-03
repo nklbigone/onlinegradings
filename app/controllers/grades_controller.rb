@@ -8,6 +8,7 @@ class GradesController < ApplicationController
     end
   end
   def show
+    @comments = Comment.where(grade_id: @grade)
   end
   def new
     @grade = Grade.new

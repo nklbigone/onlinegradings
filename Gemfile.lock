@@ -98,6 +98,8 @@ GEM
       warden (~> 1.2.3)
     erubi (1.9.0)
     execjs (2.7.0)
+    faker (2.8.0)
+      i18n (>= 1.6, < 1.8)
     ffi (1.11.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -285,6 +287,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   client_side_validations
   devise
+  faker
   jbuilder (~> 2.7)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
