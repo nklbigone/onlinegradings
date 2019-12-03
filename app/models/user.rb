@@ -6,4 +6,11 @@ class User < ApplicationRecord
 
   has_many :course
   has_many :user, through: :course
+  validates :first_name, presence:true
+  validates :last_name, presence:true
+  validates :national_id, presence:true
+  validates :address, presence:true
+  validates :level, presence:true
+  validates :classes, presence:true
+  validates :email, presence:true
 end
