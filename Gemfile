@@ -9,6 +9,15 @@ gem 'simple_form'
 gem 'popper_js'
 gem 'tether-rails'
 gem 'client_side_validations'
+gem 'faker'
+gem 'kaminari'
+gem 'ransack'
+gem 'rspec-rails'
+gem 'spring-commands-rspec'
+gem 'factory_bot_rails'
+gem 'faker'
+gem "launchy"
+gem "selenium-webdriver"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 # Use postgresql as the database for Active Record

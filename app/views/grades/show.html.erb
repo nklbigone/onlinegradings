@@ -14,6 +14,6 @@
   <strong>User:</strong>
   <%= @grade.user_id %>
 </p>
-
+<%= render 'comments/comment'%>
 <%= link_to 'Edit', edit_grade_path(@grade) %> |
 <%= link_to 'Back', grades_path %>

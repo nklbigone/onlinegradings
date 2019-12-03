@@ -4,6 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :course
-  has_many :user, through: :course
+  has_many :courses
+  has_many :users, through: :courses
+  validates :first_name, presence:true
+  validates :last_name, presence:true
+  validates :national_id, presence:true
+  validates :address, presence:true
+  validates :level, presence:true
+  validates :classes, presence:true
+  validates :email, presence:true
 end

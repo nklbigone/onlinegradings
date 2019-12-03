@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :grades
+  resources :grades do 
+    resources :comments
+  end
   resources :courses
   root to: 'pages#home'
   devise_for :users
