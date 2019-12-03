@@ -5,4 +5,5 @@ class Grade < ApplicationRecord
   validates :course, presence:true
   validates :user, presence:true
   validates :mark, presence:true
+  paginates_per 3
 end

@@ -1,11 +1,10 @@
 class GradesController < ApplicationController
   before_action :set_grade, only: [:show, :edit, :update, :destroy]
+  before_action :check_student, only: [:edit, :destroy]
   def index
-    if current_user && current_user.admin == false
-    @grades = Grade.where(user_id: current_user.id == logger)
-    else
-      @grades = Grade.all
-    end
+    
+    @grades = Grade.all.page(params[:page])
+
   end
   def show
     @comments = Comment.where(grade_id: @grade)
@@ -55,6 +54,13 @@ class GradesController < ApplicationController
       params.require(:grade).permit(:mark, :course_id, :user_id)
     end
 
+
+
+    def check_student
+      unless current_user.admin?
+        redirect_to grades_url, notice: 'only admin can change any data'
+      end
+    end
 
 
 end

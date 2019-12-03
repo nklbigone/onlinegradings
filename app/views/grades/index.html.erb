@@ -1,13 +1,14 @@
 <h1>Grades</h1>
-
 <table class=" table table-striped">
   <thead class="thead-dark">
     <tr>
       
       <th>Mark</th>
       <th>Course</th>
-      <th>Student</th>
       <th>Action</th>
+      <th>
+      
+    </th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -15,25 +16,24 @@
   <tbody>
     <% @grades.each do |grade| %>
       <tr>
+
         <td><%= grade.mark %>
         <td><%= grade.course.course_name %></td>
-        <td><%= grade.user.last_name %></td>
         <td><%= link_to 'Show', grade ,class: 'btn btn-success btn btn-sm' %></td>
         <td><%= link_to 'Edit', edit_grade_path(grade), class: 'btn btn-success btn btn-sm' %></td>
         <td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn btn-sm' %></td>
+
       </tr>
     <% end %>
     <td colspan="6">
-    <% if current_user && current_user.admin == true %>
     <b>
     <%= @user = current_user.last_name %>
-    <%= @grad = Grade.all.sum(:mark)*100/600 %>%
+    <%= @grad = Grade.all.sum(:mark)*100/400 %>%
     <% if @grad > 50 %>
     <u style="color: black">Pass
     <%else%>
     <u style="color: red">Fails</u>
     </u>
-    <%end%>
     </td>
 
     <%end%>
@@ -43,5 +43,5 @@
 </table>
 
 <br>
-
+<%= paginate @grades %>
 <%= link_to 'New Grade', new_grade_path, class: 'btn btn-success btn btn-sm' %>

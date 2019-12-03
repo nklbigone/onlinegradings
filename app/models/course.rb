@@ -4,4 +4,5 @@ class Course < ApplicationRecord
     validates :course_name, presence:true
     validates :course_code, presence:true
     validates :user_id, presence:true
+    paginates_per 3
 end
